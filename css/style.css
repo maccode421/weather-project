@@ -1,0 +1,46 @@
+p,
+form {
+  text-align: center;
+  font-family: "Georgia", sans-serif;
+}
+
+p {
+  font-size: 20px;
+}
+
+.well {
+  margin-left: 35%;
+  margin-right: 35%;
+}
+
+h1,
+h2 {
+  margin-left: 35%;
+  margin-right: 35%;
+  text-align: center;
+  font-family: "Georgia", sans-serif;
+}
+
+footer {
+  min-height: 10vh;
+  padding-top: 30px;
+  padding-bottom: 1px;
+  color: gray;
+  background-color: black;
+}
+
+section {
+  min-height: 90vh;
+}
+
+body {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
