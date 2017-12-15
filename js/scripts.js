@@ -6,10 +6,10 @@ var getLocation = function (data) {
   var city = data.city
   var state = data.regionName
   // Custom url for the weather API, it is only missing imperial or metric format.
-  url = 'http://api.openweathermap.org/data/2.5/weather?' + 'lat=' + lat + '&lon=' + lon + '&units='
+  url = 'http://api.openweathermap.org/data/2.5/weather?' + 'lat=' + lat + '&lon=' + lon + '&units=' + 'appid=' + aKey
 
   var units = 'imperial'
-  // Function to get the Weather info and display it.
+    // Function to get the Weather info and display it.
     getWeather = function (data) {
       var temp = data.main.temp
       var tempUnit = units === 'metric' ? 'C' : 'F'
@@ -22,7 +22,7 @@ var getLocation = function (data) {
       // Displays the custom HTML
       $('#weather').html(html)
 
-      // Checks what kind style of temperature was used for dynamic background image.
+          // Checks what kind style of temperature was used for dynamic background image.
           switch (tempUnit) {
             case 'F':
               var temps = [90, 70, 32]
@@ -48,7 +48,7 @@ var getLocation = function (data) {
         $.getJSON(url + 'imperial', getWeather, 'jsonp')
       }
 
-      // When the document finished loading call the Location API
+// When the document finished loading call the Location API
 $(document).ready(function () {
   $.getJSON('http://ip-api.com/json', getLocation, 'jsonp')
   // Handler for option between Metric and Imperial style temperature
