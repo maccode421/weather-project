@@ -6,7 +6,7 @@ var getLocation = function (data) {
   var city = data.city
   var state = data.regionName
   // Custom url for the weather API, it is only missing imperial or metric format.
-  url = 'http://api.openweathermap.org/data/2.5/weather?' + 'lat=' + lat + '&lon=' + lon + '&units=' + 'appid=' + aKey
+  url = 'http://api.openweathermap.org/data/2.5/weather?' + 'lat=' + lat + '&lon=' + lon + '&appid=' + aKey + '&units='
 
   var units = 'imperial'
     // Function to get the Weather info and display it.
